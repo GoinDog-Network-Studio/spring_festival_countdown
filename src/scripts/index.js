@@ -19,3 +19,9 @@ function update() {
     percent.innerText = (percent_num * 100).toString().substring(0, 9) + "%";
 }
 setInterval(update, 1000);
+let background_music = document.createElement("audio");
+background_music.src = "./src/media/background.mp3";
+background_music.setAttribute("autoplay", "true")
+background_music.setAttribute("loop", "true")
+background_music.style.display="none";
+background_music.play()

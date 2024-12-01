@@ -43,18 +43,22 @@ function update() {
     percent.innerText = (percent_num * 100).toString().substring(0, 9) + "%";
 }
 
-// 使用setInterval每隔1000毫秒（1秒）调用一次update函数，以更新倒计时和进度百分比
-setInterval(update, 1000);
 
 // 创建一个audio元素用于播放背景音乐
-let background_music = document.createElement("audio");
+let background_music = document.createElement("video");
 // 设置音频文件的路径
 background_music.src = "./src/media/background.mp3";
 // 设置音频循环播放
 background_music.setAttribute("loop", "true");
 // 隐藏音频元素
 background_music.style.display="none";
-// 播放音频
-window.onload = function() {
+// 添加按钮点击事件监听，之后播放音乐
+document.getElementById("start").addEventListener("click", e => {
+    document.getElementById("window").style.animation = "hidden 0.2s ease-in 0s 1 normal forwards";
+    setTimeout(() => {
+        document.getElementById("window").style.display = "none"
+    }, 2000)
     background_music.play();
-}
+    // 使用setInterval每隔1000毫秒（1秒）调用一次update函数，以更新倒计时和进度百分比
+    setInterval(update, 1000);
+})

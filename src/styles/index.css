@@ -1,0 +1,48 @@
+body {
+    background-image: url("/src/images/background.png");
+    background-size: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: yellow;
+    width: 100vw;
+    filter: drop-shadow(0 0 0.5rem yellow);
+}
+.section_a,
+.section_b {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.section_b img {
+    border-radius: 15px;
+    margin: 10px;
+    width: 40%;
+}
+.title {
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: baseline;
+    gap: 20px;
+    font-weight: normal;
+}
+.title p {
+    margin: 0;
+    font-weight: bold;
+}
+.page_foot {
+    position: absolute;
+    bottom: 0;
+}
+#counter,
+#percent {
+    font-weight: bold;
+    font-size: 50px;
+}

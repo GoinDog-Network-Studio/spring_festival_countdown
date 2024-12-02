@@ -22,7 +22,7 @@ function update() {
     if (minute_counter.toString().length != 2) minute_counter = "0" + minute_counter;
 
     // 计算当前秒到59秒的秒数
-    let second_counter = 60 - date.getSeconds();
+    let second_counter = 59 - date.getSeconds();
     // 如果秒数是一位数，则在前面补0
     if (second_counter.toString().length != 2) second_counter = "0" + second_counter;
 

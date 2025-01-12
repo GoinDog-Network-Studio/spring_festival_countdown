@@ -9,7 +9,7 @@ function update() {
 
     // 计算距离下个月的第10天的天数
     // 当前日期到月底的天数加上下个月10号的天数
-    let day_counter = 28 + (31 - date.getDay());
+    let day_counter = 31 - date.getDay();
 
     // 计算当前小时到23点的小时数
     let hour_counter = 23 - date.getHours();
